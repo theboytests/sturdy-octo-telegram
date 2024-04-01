@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr" class="bg-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Les Petits Plats</title>
+</head>
+
+<body class="bg-lightgrey w-[1440px] m-auto">
+    <header class="flex flex-col">
+        <div class="h-[667px] bg-backgroundPetitsPlats bg-no-repeat flex flex-col">
+            <div class="h-[25px] w-[207px] flex gap-x-[4.6px] items-baseline mt-[51px] ml-[69px]">
+                <img class="h-[25px]" src="assets/icons/petitsPlatsLogo.svg" alt="logo"><img class="h-[21.25px]"
+                    src="assets/icons/rondLogo.svg" alt="rond logo">
+            </div>
+            <h2 class="text-yellow_p7 text-xl font-primaryFont text-center mt-[169px]">CHERCHEZ PARMI PLUS DE 1500
+                RECETTES<br>DU
+                QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
+            <div class="h-[72px] w-[954px] px-2.5 rounded-borderRadius11 bg-white flex items-center mt-[29.5px] m-auto">
+                <input class="px-6 w-full placeholder:text-grey_p7 font-secondaryFont text-base focus:outline-none"
+                    type="search" name="searchBar" id="searchBar"
+                    placeholder="Rechercher une recette, un ingrédient, ..." ><img class="eraseSearchbar" src="assets/icons/eraseSearch.svg" alt="erase Searchbar">
+                <button id="searchBarButton"
+                    class="p-3 rounded-borderRadius10 bg-black_p7 hover:bg-yellow_p7 transition-all duration-300 ease-out group group-hover:bg-black_p7 group-hover:duration-300 group-hover:ease-out">
+                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none"
+                        class="stroke-white group-hover:stroke-black_p7" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group4">
+                            <circle id="Ellipse4" cx="10" cy="10.4219" r="9.5" />
+                            <line id="Line2" x1="18.3536" y1="19.0683" x2="27.3536" y2="28.0683" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="px-[102px]">
+        <div class="searchContainer">
+            <div class="h-[56px] flex my-[21px] justify-between">
+                <div class="dropdownsContainer flex gap-x-16">
+                    <div class="dropdownDivContainer">
+                        <button class="dropbtn">Ingrédients<img class="w-[13px]" src="assets/icons/extend-more.svg"
+                                alt="extend-more"></button>
+                        <div class="dropdown-content">
+                            <div class="searchItemsContainer">
+                                <input type="search" name="searchIngredients" id="searchIngredients"
+                                    class="dropdownSearch">
+                                    <img class="eraseSearchbarItem" src="assets/icons/eraseSearchItem.svg" alt="erase SearchbarItem">
+                                <img src="assets/icons/search.svg" alt="search icon">
+                            </div>
+                            <ul id="ingredients-list">
+                                <!-- La liste d'ingrédients sera générée dynamiquement ici -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdownDivContainer">
+                        <button class="dropbtn">Appareils<img class="w-[13px]" src="assets/icons/extend-more.svg"
+                                alt="extend-more"></button>
+                        <div class="dropdown-content">
+                            <div class="searchItemsContainer">
+                                <input type="search" name="searchAppliances" id="searchAppliances"
+                                    class="dropdownSearch">
+                                    <img class="eraseSearchbarItem" src="assets/icons/eraseSearchItem.svg" alt="erase SearchbarItem">
+                                <img src="assets/icons/search.svg" alt="search icon">
+                            </div>
+                            <ul id="appliances-list">
+                                <!-- La liste d'appareils sera générée dynamiquement ici -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdownDivContainer">
+                        <button class="dropbtn">Ustensiles<img class="w-[13px]" src="assets/icons/extend-more.svg"
+                                alt="extend-more"></button>
+                        <div class="dropdown-content">
+                            <div class="searchItemsContainer">
+                                <input type="search" name="searchUstensils" id="searchUstensils" class="dropdownSearch">
+                                <img class="eraseSearchbarItem" src="assets/icons/eraseSearchItem.svg" alt="erase SearchbarItem">
+                                <img src="assets/icons/search.svg" alt="search icon">
+                            </div>
+                            <ul id="ustensils-list">
+                                <!-- La liste d'ustensils sera générée dynamiquement ici -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="numberRecipes" class="font-primaryFont text-[21px] text-black_p7 mb-[9px] self-end"></div>
+            </div>
+        </div>
+
+    </main>
+    <script type="module" src="scripts/index.js"></script>
+</body>
+
+</html>
